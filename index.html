@@ -19,7 +19,7 @@
 
     .right {
        right:0;
-       top : 30%;
+       margin-top : 5%;
 
         background-color: #e3dec1;
     }
@@ -29,6 +29,27 @@
     .moveLeftSecond{
         padding-left: 8%;
     }
+    @media screen and (max-width:800px) {
+  .left, .right{
+    width:100%;
+    
+     /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  @media screen and (max-width:800px) {
+  .right{
+    margin-top : 60%;
+    
+     /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  @media screen and (max-width:800px) {
+  .moveLeftSecond{
+   
+    
+        padding-left: 1%;
+    
+     /* The width is 100%, when the viewport is 800px or smaller */
+  }
+  }
 </style>
 
 <head>
@@ -46,46 +67,46 @@
     <div ng-app="myApp" ng-controller="RockPaperScissor as ctrl">
         <form name="myForm" class="my-form">
             <div class="panel-heading" style="background-color: #b94629; color: #ffffff">
-                <h2><b>ROCK PAPER SCISSOR</b></h2>
+                <h2 style="font-size:2vw;"><b>ROCK PAPER SCISSOR</b></h2>
             </div>
             <div>
                 <div class="align-Task">
                     <div class="split left">
                         <div class="moveLeft">
-                            <h1 id="username"></h1>
-                            <p><b> please select one of the images </b></p>
+                            <h1 id="username" style="font-size:2vw;"></h1>
+                            <p style="font-size:1vw;"><b> please select one of the images </b></p>
                             <div class="row">
                                 <div class="col-xs-2 col-sm-2 col-lg-2">
                                     <button id="rock" ng-click="selectedImage('rock')">
-                                        <img src="rock5.PNG""><img />
+                                        <img src="rock5.PNG" style="max-width:100%;height:auto;"></img>
                   </button>
                 </div>
                 <div class=" col-xs-2">
                                         <button id="paper" ng-click="selectedImage('paper')">
-                                            <img src="paper3.PNG" /><img />
+                                            <img src="paper3.PNG" style="max-width:100%;height:auto;"/></img>
                                         </button>
                                 </div>
                                 <div class="col-xs-2">
                                     <button id="scissor" ng-click="selectedImage('scissor')">
-                                        <img src="scissor6.PNG" /><img />
+                                        <img src="scissor6.PNG" style="max-width:100%;height:auto;"/></img>
                                     </button>
                                 </div>
                             </div>
                             <br />
                             
-                            <h1>JavaScript AI</h1>
-                            <p><b> I can select myself </b></p>
+                            <h1 style="font-size:2vw;">JavaScript AI</h1>
+                            <p style="font-size:1vw;"><b> I can select myself </b></p>
                             <div class="row">
                                 <div class="col-xs-2">
-                                    <button id="rockAI"><img src="rock5.PNG" /><img /></button>
+                                    <button id="rockAI"><img src="rock5.PNG" style="max-width:100%;height:auto;"/></img></button>
                                 </div>
 
                                 <div class="col-xs-2">
-                                    <button id="paperAI"><img src="paper3.PNG" /><img /></button>
+                                    <button id="paperAI"><img src="paper3.PNG" style="max-width:100%;height:auto;"/></img></button>
                                 </div>
                                 <div class="col-xs-2">
                                     <button id="scissorAI">
-                                        <img src="scissor6.PNG" /><img />
+                                        <img src="scissor6.PNG" style="max-width:100%;height:auto;"/></img>
                                     </button>
                                 </div>
                             </div>
@@ -101,14 +122,14 @@
                         color: #ffffff;
                         font-size: 18px;
                       ">
-                                        <td style="line-height: 30px"><b>Round No</b></td>
-                                        <td style="line-height: 30px"><b>{{name}}</b></td>
-                                        <td style="line-height: 30px"><b>JavaScript AI</b></td>
+                                        <td style="line-height: 1;font-size:1.5vw;"><b>Round No</b></td>
+                                        <td style="line-height: 1;font-size:1.5vw;"><b>{{name}}</b></td>
+                                        <td style="line-height: 1;font-size:1.5vw;"><b>JavaScript AI</b></td>
                                     </tr>
                                     <tr style="font-size: 18px" ng-repeat="result in FinalResults">
-                                        <td style="line-height: 30px">{{result.roundNo}}</td>
-                                        <td style="line-height: 30px">{{result.userResult}}</td>
-                                        <td style="line-height: 30px">{{result.AIResult}}</td>
+                                        <td style="line-height: 1;font-size:1.5vw;">{{result.roundNo}}</td>
+                                        <td style="line-height: 1;font-size:1.5vw;">{{result.userResult}}</td>
+                                        <td style="line-height: 1;font-size:1.5vw;">{{result.AIResult}}</td>
                                     </tr>
                                 </tbody>
                             </table>
