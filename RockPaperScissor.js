@@ -15,8 +15,31 @@ app.controller("RockPaperScissor", function ($scope) {
   var userselection, randomNumber, javascriptSelection;
   var itemArray = ["rock", "paper", "scissor"];
   $scope.selectedImage = function (data) {
-   
+    
 if (round <= 5) {
+      finalwinner = ur > ai ? name : "javascript AI";
+      if (ur == ai) {
+        alert("Result of the game is Draw.");
+      } else {
+        alert(finalwinner + " won the game");
+      }
+      round = 0;
+      $scope.round = round;
+      ur = 0;
+
+      ai = 0;
+
+      $scope.FinalResults = [];
+       document.getElementById("paper").style.backgroundColor = "";
+       document.getElementById("rock").style.backgroundColor = "";
+       document.getElementById("scissor").style.backgroundColor = "";
+       document.getElementById("rockAI").style.backgroundColor = "";
+       document.getElementById("scissorAI").style.backgroundColor = "";
+       document.getElementById("paperAI").style.backgroundColor = "";
+
+    }
+   
+else {
     var resultdetails = {};
 
     switch (data) {
@@ -125,27 +148,6 @@ if (round <= 5) {
     userResult = "";
     AIResult = "";
 }
-     else {
-      finalwinner = ur > ai ? name : "javascript AI";
-      if (ur == ai) {
-        alert("Result of the game is Draw.");
-      } else {
-        alert(finalwinner + " won the game");
-      }
-      round = 0;
-      $scope.round = round;
-      ur = 0;
-
-      ai = 0;
-
-      $scope.FinalResults = [];
-       document.getElementById("paper").style.backgroundColor = "";
-       document.getElementById("rock").style.backgroundColor = "";
-       document.getElementById("scissor").style.backgroundColor = "";
-       document.getElementById("rockAI").style.backgroundColor = "";
-       document.getElementById("scissorAI").style.backgroundColor = "";
-       document.getElementById("paperAI").style.backgroundColor = "";
-
-    }
+     
   };
 });
