@@ -16,7 +16,7 @@ app.controller("RockPaperScissor", function ($scope) {
   var itemArray = ["rock", "paper", "scissor"];
   $scope.selectedImage = function (data) {
     
-if (round <= 5) {
+if (round >= 5) {
       finalwinner = ur > ai ? name : "javascript AI";
       if (ur == ai) {
         alert("Result of the game is Draw.");
