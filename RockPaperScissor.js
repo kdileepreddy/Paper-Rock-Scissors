@@ -29,8 +29,12 @@ app.controller("RockPaperScissor", function ($scope) {
       ai = 0;
 
       $scope.FinalResults = [];
-    }
+       document.getElementById("paper").style.backgroundColor = "";
+       document.getElementById("rock").style.backgroundColor = "";
+       document.getElementById("scissor").style.backgroundColor = "";
 
+    }
+else{
     var resultdetails = {};
 
     switch (data) {
@@ -138,5 +142,6 @@ app.controller("RockPaperScissor", function ($scope) {
     $scope.FinalResults.push(resultdetails);
     userResult = "";
     AIResult = "";
+}
   };
 });
